@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/maddy.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Restaurant</title>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Chez Maddy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="entrees.html">Entrées</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="plats.html">Plats</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="desserts.html">Desserts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="boissons.html">Boissons</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" href=""><i class="bi bi-cart-fill"></i></a>
+                </li>
+                <span class="nbProduit">0</span>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+
+</header>
+
+<h1 class="text-center">Desserts</h1>
+
+<div class="container row">
+    <div class="card" style="width: 18rem;">
+        <img src="assets/img/gateauFraise.png" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Gateau à la fraise</h5>
+          <p class="card-text">Succulent gateau à la fraise.</p>
+          <p class="prix">3€</p>
+          <a href="#" class="add btn btn-primary w-100" data-name="Gateau à la fraise" data-price="3">Ajouter au panier</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="assets/img/tarteAuxMyrtilles.png" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tarte aux myrtilles</h5>
+          <p class="card-text">Savoureuse tarte aux myrtilles.</p>
+          <p class="prix">3€</p>
+          <a href="#" class="add btn btn-primary w-100" data-name="Tarte aux myrtilles" data-price="3">Ajouter au panier</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="assets/img/tabletteDeChocolat.png" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tablette de chocolat</h5>
+          <p class="card-text">Tablette de chocolat.</p>
+          <p class="prix">2€</p>
+          <a href="#" class="add btn btn-primary w-100" data-name="Tablette de chocolat" data-price="2">Ajouter au panier</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="assets/img/glaces.png" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Glaces</h5>
+          <p class="card-text">Glace fraise, chocolat, vanille, pistache, café , caramel ...</p>
+          <p class="prix">5€</p>
+          <a href="#" class="add btn btn-primary w-100" data-name="Glaces" data-price="5">Ajouter au panier</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="assets/img/donuts.png" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Donuts</h5>
+          <p class="card-text">Excellent donuts different gout.</p>
+          <p class="prix">3€</p>
+          <a href="#" class="add btn btn-primary w-100" data-name="Donuts" data-price="3">Ajouter au panier</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="assets/img/milkshake.png" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Milkshake</h5>
+          <p class="card-text">Milkshake fraise, vanille, banane, kiwi.</p>
+          <p class="prix">3€</p>
+          <a href="#" class="add btn btn-primary w-100" data-name="Milkshake" data-price="3">Ajouter au panier</a>
+        </div>
+      </div>
+</div>
+
+<!-- Modal Panier-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Votre panier</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body produitModal">
+          
+        </div>
+        <p class="text-center">total: <span class="fw-bold" id="total"></span> </p>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <a class="paiement" href="paiement.html"><button type="button" class="btn btn-primary">Payer</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <p>2023</p>
+    <p>Mentions légales</p>
+  </footer>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>  
+</body>
+</html>
