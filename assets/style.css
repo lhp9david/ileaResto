@@ -53,6 +53,10 @@ footer p {
     padding:  0 1em;
 }
 
+.card {
+    padding: 0;
+}
+
 .produit {
     display: flex;
     justify-content: space-between;
